@@ -112,6 +112,9 @@ function getBuildLog() {
             log(response.body);
             if (buildRunning) {
                 setTimeout(getBuildStatus, 1000);
+            } else {
+                console.log('#####################')
+                console.log('view console log ' + api + currentBuild + '/console')
             }
         })
         .catch(function(err) {
